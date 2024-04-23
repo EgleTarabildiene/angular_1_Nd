@@ -1,0 +1,12 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <label class="form-label">Įveskite kraštine a: </label>
+        <input class="form-control mb-3" type="number" name="a" [(ngModel)]="a">
+        <label class="form-label">Įveskite kraštine b: </label>
+        <input class="form-control mb-3" type="number" name="b" [(ngModel)]="b">
+        <label class="form-label">Įveskite kraštine c: </label>
+        <input class="form-control mb-3" type="number" name="c" [(ngModel)]="c">
+        <button class="btn btn-primary" (click)="skaiciuok()" [disabled]="a==null || b==null || c==null">Apskaičiuoti plotą</button>
+        <div class="alert alert-info mt-3" *ngIf="suma!=null">Plotas: {{ suma }} </div>
+    </div>
+</div>
